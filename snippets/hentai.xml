@@ -21,6 +21,10 @@
           fetch="https://github.com/hentaiOS"
           revision="refs/heads/TwistedScarlett" />
 
+  <remote name="github/hentaiOS-miatoll"
+          fetch="https://github.com/hentaiOS-miatoll"
+          revision="refs/heads/TwistedScarlett" />
+
   <remote name="gitlab/hentaiOS"
           fetch="https://gitlab.com/hentaiOS"
           revision="refs/heads/TwistedScarlett" />
@@ -48,12 +52,14 @@
   <remove-project name="device/google/raviole-kernel" />
   <remove-project name="platform/bootable/recovery" />
   <remove-project name="platform/build" />
+  <remove-project name="platform/build/soong" />
   <remove-project name="platform/frameworks/base" />
   <remove-project name="platform/system/core" />
   <remove-project name="platform/hardware/qcom/wlan" />
   <remove-project name="platform/hardware/qcom/sm7250/display" />
   <remove-project name="platform/hardware/qcom/sm7250/media" />
   <remove-project name="platform/hardware/qcom/sm7250/gps" />
+  <remove-project name="platform/packages/apps/Settings" />
 
   <!-- hentaiOSのスタート -->
   <project path="build/make" name="platform_build" groups="pdk" remote="github/hentaiOS" >
@@ -65,9 +71,13 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
+  <project path="build/soong" name="platform_build_soong" groups="pdk,tradefed" remote="github/hentaiOS-miatoll" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
   <project path="bootable/recovery" name="platform_bootable_recovery" groups="pdk" remote="github/hentaiOS" />
   <project path="external/json-c" name="platform_external_json-c" groups="pdk" remote="github/hentaiOS" />
-  <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="github/hentaiOS" />
+  <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="github/hentaiOS-miatoll" />
   <project path="hardware/qcom/wlan" name="platform_hardware_qcom_wlan" groups="qcom_wlan,pdk-qcom" remote="github/hentaiOS" />
   <project path="hardware/qcom-caf/common" name="platform_hardware_qcom-caf_common" groups="qcom,pdk-qcom" remote="github/hentaiOS" >
     <!-- add guard for AOSP hardware/qcom dir -->
@@ -91,6 +101,7 @@
   <project path="hardware/qcom-caf/sm8150/media" name="android_hardware_qcom_media" groups="pdk" remote="github/LineageOS" revision="lineage-20.0-caf-sm8150" />
   <project path="system/core" name="platform_system_core" groups="pdk" remote="github/hentaiOS" />
   <project path="packages/apps/RepainterServicePriv" name="platform_packages_apps_RepainterServicePriv" groups="pdk-fs" remote="github/hentaiOS" />
+  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" groups="pdk-fs" remote="github/hentaiOS-miatoll" />
   <project path="vendor/codeaurora/telephony" name="platform_vendor_codeaurora_telephony" groups="vendor" remote="github/hentaiOS" />
   <project path="vendor/gms" name="platform_vendor_gms" groups="vendor" remote="gitlab/hentaiOS" clone-depth="1"/>
   <project path="vendor/hentai" name="platform_vendor_hentai" groups="vendor" remote="github/hentaiOS" />
