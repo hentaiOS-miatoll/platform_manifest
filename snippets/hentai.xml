@@ -62,13 +62,14 @@
   <remove-project name="platform/build" />
   <remove-project name="platform/build/soong" />
   <remove-project name="platform/frameworks/base" />
-  <remove-project name="platform/system/core" />
   <remove-project name="platform/hardware/libhardware" />
   <remove-project name="platform/hardware/qcom/wlan" />
   <remove-project name="platform/hardware/qcom/sm7250/display" />
   <remove-project name="platform/hardware/qcom/sm7250/media" />
   <remove-project name="platform/hardware/qcom/sm7250/gps" />
   <remove-project name="platform/packages/apps/Settings" />
+  <remove-project name="platform/system/core" />
+  <remove-project name="platform/system/sepolicy" />
 
   <!-- hentaiOSのスタート -->
   <project path="build/make" name="platform_build" groups="pdk" remote="github/hentaiOS" >
@@ -125,6 +126,7 @@
   <project path="hardware/qcom-caf/sm8150/media" name="android_hardware_qcom_media" groups="pdk" remote="github/LineageOS" revision="lineage-20.0-caf-sm8150" />
   <project path="signing-keys" name="platform_signing-keys" remote="github/hentaiOS-miatoll-private" />
   <project path="system/core" name="platform_system_core" groups="pdk" remote="github/hentaiOS" />
+  <project path="system/sepolicy" name="platform_system_sepolicy" groups="pdk" remote="github/hentaiOS-miatoll" />
   <project path="packages/apps/RepainterServicePriv" name="platform_packages_apps_RepainterServicePriv" groups="pdk-fs" remote="github/hentaiOS" />
   <project path="packages/apps/Settings" name="platform_packages_apps_Settings" groups="pdk-fs" remote="github/hentaiOS-miatoll" />
   <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" groups="vendor" remote="github/LineageOS" />
