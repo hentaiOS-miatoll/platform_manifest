@@ -85,16 +85,28 @@
   <project path="external/json-c" name="platform_external_json-c" groups="pdk" remote="github/hentaiOS" />
   <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="github/hentaiOS-miatoll" />
   <project path="hardware/qcom/wlan" name="platform_hardware_qcom_wlan" groups="qcom_wlan,pdk-qcom" remote="github/hentaiOS" />
-  <project path="hardware/qcom-caf/common" name="platform_hardware_qcom-caf_common" groups="qcom,pdk-qcom" remote="github/hentaiOS" >
+  <project path="hardware/qcom-caf/common" name="platform_hardware_qcom-caf_common" groups="qcom,pdk-qcom" remote="github/hentaiOS-miatoll" >
     <!-- add guard for AOSP hardware/qcom dir -->
     <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
     <!-- add guards for CAF repositories -->
-    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/sdm845/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/msm8953/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8953/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8996/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8996/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8998/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm845/Android.bp" />
     <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm845/Android.mk" />
     <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/sm8150/Android.bp" />
     <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8150/Android.mk" />
-    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/sm8250/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8250/Android.bp" />
     <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8250/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8350/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8350/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="vendor/nxp/opensource/pn5xx/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="vendor/nxp/opensource/pn5xx/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="vendor/nxp/opensource/sn100x/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="vendor/nxp/opensource/sn100x/Android.mk" />
   </project>
   <project path="hardware/qcom/sm7250/display" name="platform_hardware_qcom_sm7250_display" groups="pdk" remote="github/hentaiOS" />
   <project path="hardware/qcom/sm7250/media" name="platform_hardware_qcom_sm7250_media" groups="pdk" remote="github/hentaiOS" />
