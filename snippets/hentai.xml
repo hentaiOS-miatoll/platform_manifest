@@ -137,7 +137,7 @@
   <project path="packages/apps/Settings" name="platform_packages_apps_Settings" groups="pdk-fs" remote="github/hentaiOS-miatoll" />
   <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" groups="vendor" remote="github/LineageOS" />
   <project path="vendor/gms" name="platform_vendor_gms" groups="vendor" remote="gitlab/LeddaZ" clone-depth="1"/>
-  <project path="vendor/hentai" name="platform_vendor_hentai" groups="vendor" remote="github/hentaiOS" />
+  <project path="vendor/hentai" name="platform_vendor_hentai" groups="vendor" remote="github/hentaiOS-miatoll" />
   <project path="vendor/qcom/opensource/audio" name="android_vendor_qcom_opensource_audio" groups="qcom,qssi" remote="github/LineageOS" />
   <project path="vendor/qcom/opensource/audio-hal/st-hal" name="android_vendor_qcom_opensource_audio-hal_st-hal" groups="qcom,lahaina" remote="github/LineageOS" />
   <project path="vendor/qcom/opensource/commonsys-intf/display" name="android_vendor_qcom_opensource_display-commonsys-intf" groups="qcom,qssi" remote="github/LineageOS" />
