@@ -5,7 +5,6 @@
     <remote name="hos-lahaina" revision="Ursamoon" fetch="https://github.com/hentaiOS-lahaina/" />
     <remote name="statix" revision="udc-qpr2" fetch="https://github.com/StatiXOS/" />
     <remote name="stx-gitlab" revision="udc" fetch="https://gitlab.com/StatiXOS/" />
-    <remote name="venus-dev" revision="udc" fetch="https://github.com/AOSP-for-venus/" />
 
     <!-- ものを削除 -->
     <remove-project name="platform_frameworks_base" />
@@ -22,7 +21,6 @@
 
     <!-- Hardware -->
     <project path="hardware/interfaces" name="platform_hardware_interfaces" remote="hos-lahaina" />
-    <project path="vendor/hardware/xiaomi" name="android_vendor_hardware_xiaomi" remote="venus-dev" />
 
     <!-- Shim libraries -->
     <project path="hardware/statix/compat" name="android_hardware_statix_compat" remote="statix" />

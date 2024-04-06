@@ -40,6 +40,7 @@
     <project path="system/bpf" name="android_system_bpf" remote="stx-leddaz" />
 
     <!-- Vendor -->
+    <project path="vendor/hardware/xiaomi" name="platform_vendor_hardware_xiaomi" remote="hos-miatoll" />
     <project path="vendor/hentai" name="platform_vendor_hentai" remote="hos-miatoll" />
     <project path="vendor/xiaomi/miatoll" name="android_vendor_xiaomi_miatoll" remote="leddaz" />
 
