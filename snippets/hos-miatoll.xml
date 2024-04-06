@@ -42,6 +42,7 @@
     <project path="system/core" name="platform_system_core" remote="hos-miatoll" />
 
     <!-- Vendor -->
+    <project path="vendor/extra" name="platform_vendor_extra" remote="hos-miatoll-priv" />
     <project path="vendor/hardware/xiaomi" name="platform_vendor_hardware_xiaomi" remote="hos-miatoll" />
     <project path="vendor/hentai" name="platform_vendor_hentai" remote="hos-miatoll" />
     <project path="vendor/xiaomi/miatoll" name="android_vendor_xiaomi_miatoll" remote="leddaz" />
