@@ -3,9 +3,10 @@
 
     <!-- Remotes -->
     <remote name="hos-miatoll" revision="Ursamoon" fetch="https://github.com/hentaiOS-miatoll/" />
+    <remote name="hos-miatoll-priv" revision="Ursamoon" fetch="ssh://git@github.com/hentaiOS-miatoll/" />
     <remote name="leddaz" revision="Ursamoon" fetch="https://github.com/LeddaZ/" />
     <remote name="stx-leddaz" revision="udc-qpr2" fetch="https://github.com/statix-leddaz/" />
-    <remote name="gitea" fetch="https://git.keksla.wtf/" revision="udc-qpr2" />
+    <remote name="gitea" revision="udc-qpr2" fetch="https://git.keksla.wtf/" />
 
     <!-- ものを削除 -->
     <remove-project name="platform_build" />
@@ -24,15 +25,22 @@
         <linkfile dest="build/tools" src="tools" />
     </project>
 
-    <!-- Cringe -->
+    <!-- Device -->
     <project path="device/xiaomi/miatoll" name="android_device_xiaomi_miatoll" remote="leddaz" />
     <project path="device/xiaomi/miatoll-kernel" name="android_device_xiaomi_miatoll-kernel" remote="leddaz" revision="udc" />
-    <project path="vendor/xiaomi/miatoll" name="android_vendor_xiaomi_miatoll" remote="leddaz" />
 
-    <!-- Yes -->
+    <!-- Packages -->
     <project path="packages/apps/Flash" name="android_packages_apps_Statix_Flash" remote="stx-leddaz" />
     <project path="packages/modules/Connectivity" name="LeddaZ/android_packages_modules_Connectivity" remote="gitea" />
+
+    <!-- Signing keys -->
+    <project path="signing-keys" name="platform_signing-keys" remote="hos-miatoll-priv" />
+
+    <!-- System -->
     <project path="system/bpf" name="android_system_bpf" remote="stx-leddaz" />
+
+    <!-- Vendor -->
     <project path="vendor/hentai" name="platform_vendor_hentai" remote="hos-miatoll" />
+    <project path="vendor/xiaomi/miatoll" name="android_vendor_xiaomi_miatoll" remote="leddaz" />
 
 </manifest>
