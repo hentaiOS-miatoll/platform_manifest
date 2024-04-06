@@ -13,6 +13,7 @@
     <remove-project name="platform_packages_apps_helluvaUpdater" />
     <remove-project name="platform/packages/modules/Connectivity" />
     <remove-project name="platform/system/bpf" />
+    <remove-project name="platform_system_core" />
     <remove-project name="platform_vendor_hentai" />
 
     <!-- Build -->
@@ -38,6 +39,7 @@
 
     <!-- System -->
     <project path="system/bpf" name="android_system_bpf" remote="stx-leddaz" />
+    <project path="system/core" name="platform_system_core" remote="hos-miatoll" />
 
     <!-- Vendor -->
     <project path="vendor/hardware/xiaomi" name="platform_vendor_hardware_xiaomi" remote="hos-miatoll" />
