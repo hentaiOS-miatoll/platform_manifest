@@ -1375,4 +1375,7 @@
 
   <!-- END open-source projects -->
   <include name="snippets/hentai.xml" />
+  <include name="snippets/caf.xml" />
+  <include name="snippets/hos-lahaina.xml" />
+  <include name="snippets/hos-miatoll.xml" />
 </manifest>

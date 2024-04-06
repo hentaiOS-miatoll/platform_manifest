@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <!-- Remotes -->
+    <remote name="hos-lahaina" revision="Ursamoon" fetch="https://github.com/hentaiOS-lahaina/" />
+    <remote name="statix" revision="udc-qpr2" fetch="https://github.com/StatiXOS/" />
+    <remote name="stx-gitlab" revision="udc" fetch="https://gitlab.com/StatiXOS/" />
+    <remote name="venus-dev" revision="udc" fetch="https://github.com/AOSP-for-venus/" />
+
+    <!-- ものを削除 -->
+    <remove-project name="platform_frameworks_base" />
+    <remove-project name="platform/build/soong" />
+    <remove-project name="platform/external/tinycompress" />
+    <remove-project name="platform/hardware/interfaces" />
+    <remove-project name="platform/hardware/libhardware" />
+
+    <!-- Device Settings -->
+    <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="statix" />
+
+    <!-- Frameworks -->
+    <project path="frameworks/base" name="platform_frameworks_base" remote="hos-lahaina" />
+
+    <!-- Hardware -->
+    <project path="hardware/interfaces" name="platform_hardware_interfaces" remote="hos-lahaina" />
+    <project path="vendor/hardware/xiaomi" name="android_vendor_hardware_xiaomi" remote="venus-dev" />
+
+    <!-- Shim libraries -->
+    <project path="hardware/statix/compat" name="android_hardware_statix_compat" remote="statix" />
+
+    <!-- Yes -->
+    <project path="build/soong" name="platform_build_soong" remote="hos-lahaina" >
+        <linkfile src="root.bp" dest="Android.bp" />
+        <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+    </project>
+    <project path="external/tinycompress" name="platform_external_tinycompress" remote="hos-lahaina" />
+    <project path="hardware/libhardware" name="platform_hardware_libhardware" remote="hos-lahaina" />
+
+</manifest>
