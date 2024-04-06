@@ -47,7 +47,7 @@
   </project>
   <project path="hardware/qcom-caf/bootctrl" name="android_hardware_qcom_bootctrl" remote="statix" revision="udc" />
   <project path="hardware/qcom-caf/bt" name="android_hardware_qcom_bt" remote="statix" revision="10-caf" />
-  <project path="hardware/qcom-caf/kernel-headers" name="android_hardware_qcom-caf_kernel-headers" remote="statix" revision="tm-caf">
+  <project path="hardware/qcom-caf/kernel-headers" name="platform_hardware_qcom-caf_kernel-headers" remote="hos-miatoll">
     <!-- Add guards for CAF repositories. -->
     <linkfile src="msm-4.14" dest="hardware/qcom-caf/sm8150/kernel-headers" />
     <linkfile src="msm-5.4" dest="hardware/qcom-caf/sm8350/kernel-headers" />
